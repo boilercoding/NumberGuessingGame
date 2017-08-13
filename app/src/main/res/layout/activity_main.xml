@@ -7,25 +7,26 @@
     tools:context="com.boilercoding.numberguessinggame.MainActivity">
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="I'm thinking of a number between 1-20"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintVertical_bias="0.032" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Can you guess it?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView1"
         app:layout_constraintVertical_bias="0.093" />
 
     <EditText
@@ -39,8 +40,8 @@
         android:hint="Enter Number"
         android:inputType="number"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftof="@+id/guessButton"
-        tools:layout_editor_absoluteY="108dp" />
+        app:layout_constraintRight_toLeftOf="@+id/guessButton"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
 
     <Button
         android:id="@+id/guessButton"
@@ -49,8 +50,9 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:onClick="guess"
-        android:text="Guess"
+        android:text="@string/guess"
         app:layout_constraintBaseline_toBaselineOf="@+id/guessedNumberEditText"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@+id/guessedNumberEditText"
         app:layout_constraintRight_toRightOf="parent" />
 
